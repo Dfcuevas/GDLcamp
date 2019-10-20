@@ -155,6 +155,11 @@ h3{
   font-family: 'PT Sans', sans-serif;
   margin: 0;
 }
+ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
 .button{
   background-color: #fe4918;
   padding: 10px 40px;
@@ -411,6 +416,56 @@ nav.menu-programa a i,
 .detalle-evento p{
   margin-bottom: 20px;
   font-size: 20px;
+}
+/*
+==========================================================================
+   ----- INVITADOS --------
+========================================================================== 
+*/
+.lista-invitados li{
+  padding: 10px;
+  float: left;
+}
+@media (min-width: 480px) {
+  .lista-invitados li {
+    width: 50%;
+  }
+}
+@media (min-width: 768px) {
+  .lista-invitados li {
+    width: 33.3%;
+  }
+}
+.invitado{
+  position: relative;
+  overflow: hidden;
+}
+.invitado img {
+  max-width: 100%;
+  filter: grayscale(1);
+  transition: all .5s ease-in-out;
+}
+.invitado:hover img {
+  filter: grayscale(0);
+  transform: scale(1.1);
+}
+.invitado p {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 15px 10px;
+  margin: 0;
+  background-color: rgba(0, 0, 0, .55);
+  width: 100%;
+  text-align: left;
+  font-family: 'Oswald', sans-serif;
+  color: #fe4918;
+  text-transform: uppercase;
+  transition: all .4s ease-in-out;
+}
+.invitado:hover p{
+  bottom: -80px;
+  opacity: 0;
 }
 /*
 ==========================================================================
