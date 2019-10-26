@@ -182,6 +182,13 @@ ul{
   background-color: white;
   color: #fe4918;
 }
+.transparente{
+  background-color: transparent;
+  border-color: white;
+}
+.transparente:hover{
+  border: 2px solid #fe4918;
+}
 .float-right{
   float: right;
 }
@@ -584,7 +591,119 @@ nav.menu-programa a i,
   height: 420px;
   background-color: green;
 }
-
+/*
+==========================================================================
+   ----- TESTIMONIALES --------
+========================================================================== 
+*/
+.testimoniales{
+  padding-bottom: 20px;
+}
+.testimonial{
+  padding: 5px;
+}
+@media (min-width: 768px) {
+  .testimonial{
+    float: left;
+    width: 33.3%;
+  }
+}
+blockquote{
+  background-color: white;
+  border: 1px solid #e1e1e1;
+  position: relative;
+  margin: 0 0 10px 0;
+  padding-bottom: 20px;
+}
+blockquote p{
+  text-align: justify!important;
+  font-size: 1em!important;
+  font-family: 'PT Sans', sans-serif;
+  padding: 0 20px 0 65px;
+}
+blockquote p::before {
+  content: '\201c';
+  position: absolute;
+  left: 13px;
+  top: 9px;
+  font-size: 8rem;
+  margin: 0; 
+  padding: 0;
+  line-height: 1;
+  color: #fe4918;
+}
+.info-testimonial{
+  padding: 0;
+}
+.info-testimonial img{
+  float: left;
+  width: 20%;
+  border-radius: 50%;
+  margin-left: 20px;
+}
+.info-testimonial cite{
+  text-align: left;
+  color: #fe4918;
+  text-transform: uppercase;
+  font-size: 12px;
+  padding-top: 20px;
+  width: 66.6%;
+  float: right;   
+  font-weight: bold;
+  font-style: normal;
+}
+.info-testimonial cite span {
+  color: black;
+  display: block;
+  text-transform: none;
+  margin-top: 5px;
+}
+/*
+==========================================================================
+   ----- NEWSLETTER --------
+========================================================================== 
+*/
+.newsletter{
+  position:relative;
+  height: auto;
+}
+.newsletter::before{
+  background-image: url(../img/bg-newsletter.jpg);
+  content: '';  
+}
+.newsletter .contenido{
+  padding: 100px 0;
+  color: white;
+  text-align: center;
+  position: relative;
+}
+.newsletter .contenido p{
+  font-size: 1.2em;
+  text-transform: lowercase;
+}
+.newsletter .contenido h3{
+  color: white;
+  text-transform: uppercase;
+  font-size: 7vw;
+  font-family: 'PT Sans', sans-serif;
+}
+/*
+==========================================================================
+   ----- CUENTA-REGRESIVA --------
+========================================================================== 
+*/
+.cuenta-regresiva ul li{
+  text-transform: uppercase;
+  font-family: 'Oswald', sans-serif;
+  font-size: 2rem;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .cuenta-regresiva ul li{
+    width: 25%;
+    float: left;
+  }
+}
 /*
 ==========================================================================
    Helper classes
