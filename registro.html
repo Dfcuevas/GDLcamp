@@ -87,10 +87,13 @@
           <input type="text" id="apellido" name="apellido" placeholder="Tu Apellido">
         </div>
         <div class="campo">
-          <label for="apellido">Email:</label>
+          <label for="email">Email:</label>
           <input type="email" id="email" name="email" placeholder="Tu Email">
         </div>
-        <div id="error"></div>
+        <div id="error">
+
+        </div><!-- final #error-->
+
       </div>
       <!--Final #datos_usuario-->
 
@@ -278,7 +281,7 @@
               <label for="regalo">
                 Seleccione un regalo
               </label>
-              <select name="regalo" id="regale" required>
+              <select name="regalo" id="regalo" required>
                 <option value="">-- Seleccione un regalo --</option>
                 <option value="ETI">Etiquetas</option>
                 <option value="PUL">Pulsera</option>
@@ -295,7 +298,7 @@
             </div><!-- Final #lista-productos-->
             <p>Total:</p>
             <div id="suma-total">
-
+              
             </div><!--Final suma-total-->
             <input type="submit" id="btnRegistro" class="button" value="pagar">
           </div><!-- Final .total-->
