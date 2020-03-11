@@ -22,6 +22,7 @@
     var botonRegistro = document.getElementById('btnRegistro');
     var lista_productos = document.getElementById('lista-productos');
     var suma = document.getElementById('suma-total');
+    
 
   // ------------ EXTRAS ------------------
 
@@ -32,10 +33,10 @@
 
 
 
-
-
     calcular.addEventListener('click', calcularMontos);
 
+
+    pase_dia.addEventListener('click', mostrarDias);
 
     function calcularMontos(event) {
       event.preventDefault();
@@ -86,15 +87,13 @@
         suma.innerHTML = `$ ${totalPagar.toFixed(2)}`;
         
         
-       
-
-        
-        
-
-
 
 
       }
+    }
+
+    function mostrarDias(){
+      console.log('has hecho click');
     }
 
   }); // DOM CONTENT LOADED
