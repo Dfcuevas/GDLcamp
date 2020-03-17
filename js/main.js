@@ -36,7 +36,37 @@
     calcular.addEventListener('click', calcularMontos);
 
 
-    pase_dia.addEventListener('click', mostrarDias);
+    pase_dia.addEventListener('blur', mostrarDias);
+    pase_dosdias.addEventListener('blur', mostrarDias);
+    pase_completo.addEventListener('blur', mostrarDias);
+
+    nombre.addEventListener('blur', function() {
+      if(this.value == '') {
+        errorDiv.style.display = 'block';
+        errorDiv.innerHTML = 'Este campo es obligatorio';
+        this.style.border = '1px solid red';
+        errorDiv.style.border = '1px solid red';
+      }
+    });
+
+    apellido.addEventListener('blur', function() {
+      if(this.value == '') {
+        errorDiv.style.display = 'block';
+        errorDiv.innerHTML = 'Este campo es obligatorio';
+        this.style.border = '1px solid red';
+        errorDiv.style.border = '1px solid red';
+      }
+    });
+
+    email.addEventListener('blur', function() {
+      if(this.value == '') {
+        errorDiv.style.display = 'block';
+        errorDiv.innerHTML = 'Este campo es obligatorio';
+        this.style.border = '1px solid red';
+        errorDiv.style.border = '1px solid red';
+      }
+    });
+
 
     function calcularMontos(event) {
       event.preventDefault();
@@ -93,7 +123,27 @@
     }
 
     function mostrarDias(){
-      console.log('has hecho click');
+      var boletosDia = parseInt(pase_dia.value, 10)|| 0,
+            boletos2Dias = parseInt(pase_dosdias.value, 10)|| 0,
+            boletoCompleto = parseInt(pase_completo.value, 10)|| 0;
+
+            var diasElegidos = [];
+
+            if (boletosDia > 0) {
+              diasElegidos.push('viernes');
+              console.log(diasElegidos);
+            }
+            if(boletos2Dias > 0){
+              diasElegidos.push('viernes', 'sabado');
+              console.log(diasElegidos);
+            }
+            if(boletoCompleto > 0) {
+              diasElegidos.push('viernes', 'sabado', 'domingo');
+              console.log(diasElegidos);
+            }
+            for(var i=0; i < diasElegidos.length; i++){
+              document.getElementById(diasElegidos[i]).style.display = 'block';
+            }
     }
 
   }); // DOM CONTENT LOADED
